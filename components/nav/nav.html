@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/styles/base.css" />
+<link rel="stylesheet" href="/components/nav/nav.css" />
+<nav class="navbar">
+  <div class="navbar__navigation">
+    <div class="navbar__logo">
+      <a href="index.html" class="navbar__logo-link">
+        <img
+          src="/assets/logo/small.svg"
+          alt="Logo"
+          class="navbar__logo-image"
+        />
+      </a>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__link">
+        <a href="about.html" class="navbar__link">About</a>
+      </li>
+      <li class="navbar__link">
+        <a href="services.html" class="navbar__link">Services</a>
+      </li>
+      <li class="navbar__link">
+        <a href="articles.html" class="navbar__link">Articles</a>
+      </li>
+      <li class="navbar__link">
+        <a href="contact.html" class="navbar__link">Get in Touch</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar__button">
+    <a href="contact.html" class="button button--orange">Get in Touch</a>
+  </div>
+  <button class="navbar__menu-toggle" id="mobileMenuToggle">
+    <span class="navbar__menu-toggle-text">Menu</span>
+  </button>
+</nav>
+
+<script>
+  document
+    .getElementById("mobileMenuToggle")
+    .addEventListener("click", function () {
+      const navigation = document.querySelector(".navbar__navigation");
+      const navbar = document.querySelector(".navbar");
+
+      navigation.classList.toggle("navbar__navigation--mobile-open");
+      navbar.classList.toggle("navbar--menu-open");
+
+      // Update button text
+      const buttonText = this.querySelector(".navbar__menu-toggle-text");
+      buttonText.textContent = navigation.classList.contains(
+        "navbar__navigation--mobile-open"
+      )
+        ? "Close"
+        : "Menu";
+    });
+</script>
