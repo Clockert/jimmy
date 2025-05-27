@@ -108,6 +108,9 @@
   gap: var(--spacing-24);
   width: 40%;
 }
+.footer__form-title {
+  color: var(--color-white);
+}
 
 .footer__form-container {
   display: flex;

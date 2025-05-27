@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const commonTemplates = [
     { name: "nav", container: "#navbar-container" },
     { name: "services-section", container: "#services-section-container" },
-    { name: "cart-overlay", container: "#cart-overlay-container" },
+    { name: "articles-promo-section", container: "#articles-promo-container" },
     { name: "footer", container: "#footer-container" },
   ];
 
