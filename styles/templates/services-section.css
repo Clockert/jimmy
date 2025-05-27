@@ -41,7 +41,18 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .services__grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .services__card {
+    flex: 0 0 280px; /* Fixed width, adjust as needed */
+    scroll-snap-align: start;
+    min-width: 70vw;
   }
 
   .services__card-image {
@@ -49,6 +60,15 @@
     aspect-ratio: 1 / 0.6;
     object-fit: cover;
     display: block;
+  }
+
+  .services__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services__grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

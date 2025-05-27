@@ -1,0 +1,101 @@
+.about-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.258)
+    ),
+    url("/assets/photos/photo-1551524559-8af4e6624178.webp");
+  background-size: cover;
+  background-position: center;
+  gap: var(--spacing-24);
+}
+
+.about-intro-text-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--padding-content);
+  background-color: var(--color-lightblue);
+  color: var(--color-darkblue);
+  background: url("../../assets/svg/mountains.svg") var(--color-lightblue);
+  background-position: center;
+  background-size: cover; /* or cover, depending on your needs */
+  background-repeat: no-repeat;
+}
+
+.about-intro-text-section span {
+  font-weight: bold;
+  color: var(--color-darkblue);
+}
+
+.services-info {
+  padding: var(--padding-content);
+  background: var(--color-lightblue);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-content);
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.services-info__image {
+  flex: 1 1 0;
+  width: 50%;
+  position: relative;
+  object-fit: cover;
+}
+.services-info__image img {
+  height: 100%;
+  width: auto;
+  object-fit: co;
+  border-radius: var(--border-radius-default);
+}
+
+.services-info__content {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-24);
+}
+
+.services-info__subtitle {
+  color: var(--color-midblue);
+}
+
+.services-info__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+  min-width: 300px;
+}
+.services-info__text-intro p {
+  font-weight: bold;
+  color: var(--color-darkblue);
+}
+.services-info__text-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  border-bottom: solid 1px var(--color-darkblue);
+  padding-bottom: var(--spacing-24);
+}
+
+.services-info__description {
+  align-self: stretch;
+  word-wrap: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-info {
+    width: 100%;
+  }
+}
