@@ -66,9 +66,8 @@ ol {
 :root {
   /* Colors */
   --color-black: #000000;
-  --color-orange: #ef6400;
-  --color-lightorange: #fe9042;
-  --color-lightblue: #d4dce9;
+  --color-orange: #fe9042;
+  --color-lightblue: #edf4ff;
   --color-midblue: #02388a;
   --color-darkblue: #022150;
   --color-white: #ffffff;

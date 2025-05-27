@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Define templates to load on every page
   const commonTemplates = [
     { name: "nav", container: "#navbar-container" },
-    { name: "menu-overlay", container: "#menu-overlay-container" },
+    { name: "services-section", container: "#services-section-container" },
     { name: "cart-overlay", container: "#cart-overlay-container" },
     { name: "footer", container: "#footer-container" },
   ];

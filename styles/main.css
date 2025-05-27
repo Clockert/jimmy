@@ -1,3 +1,4 @@
 @import url("./base.css");
-@import url("./nav.css");
+@import url("./templates/nav.css");
 @import url("./pages/index.css");
+@import url("./templates/services-section.css");
