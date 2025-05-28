@@ -146,6 +146,11 @@
   opacity: 0.7;
 }
 
+.footer__input:focus {
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(254, 144, 66, 0.1);
+}
+
 .footer__textarea {
   min-height: 120px;
   resize: vertical;

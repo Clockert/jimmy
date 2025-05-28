@@ -1,0 +1,163 @@
+.contact-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 60vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.811),
+      rgba(255, 255, 255, 0.508)
+    ),
+    url("/assets/photos/liam-spradlin-x95EBivXF2E-unsplash.webp");
+  background-size: cover;
+  background-position: center;
+  gap: var(--spacing-24);
+}
+
+.container {
+  display: flex;
+  gap: 36px;
+  padding: var(--padding-content);
+  background-color: var(--color-lightblue);
+}
+
+.form-column {
+  min-width: 60%;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.card {
+  padding: 36px;
+  box-shadow: var(--shadow-default);
+  border: 1px solid var(--color-lightblue);
+  background-color: var(--color-white);
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+  text-align: center;
+}
+
+.divider {
+  height: 2px;
+  background: var(--color-darkblue);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: var(--spacing-8);
+  border: 1px solid var(--color-darkblue);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-darkblue);
+}
+
+.input-field::placeholder {
+  color: var(--color-darkblue);
+  opacity: 0.7;
+}
+
+.input-field:focus {
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(254, 144, 66, 0.1);
+}
+
+.textarea-field {
+  min-height: 186px;
+  resize: vertical;
+  align-items: flex-start;
+  padding-top: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.contact-icon {
+  width: 55px;
+  height: 55px;
+  background: var(--color-orange);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: var(--color-darkblue);
+  stroke-width: 1.5px;
+  fill: none;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-image {
+  width: 305px;
+  height: 305px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10.3px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+.submit-button {
+  border: none;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+}

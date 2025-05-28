@@ -42,7 +42,12 @@ select {
   font: inherit;
 }
 
-p,
+p {
+  color: var(--color-black);
+  overflow-wrap: break-word;
+  font-size: var(--font-size-base);
+}
+
 h1,
 h2,
 h3,
@@ -51,6 +56,14 @@ h5,
 h6 {
   overflow-wrap: break-word;
   color: var(--color-darkblue);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
 }
 
 a {
@@ -137,6 +150,7 @@ ol {
   /* Specific spacing from your original design */
   --padding-content: 4.6875rem; /* 75px */
   --gap-content: 4.6875rem; /* 75px */
+  --gap-content-small: 2rem; /* 32px */
 
   /* Border radius */
   --border-radius-sm: 0.25rem; /* 4px */
@@ -165,6 +179,9 @@ ol {
   :root {
     --padding-content: 3.75rem; /* 60px */
     --gap-content: 3.75rem; /* 60px */
+    --gap-content-small: 1.75rem; /* 28px */
+    --font-size-xl: 1.25rem; /* 20px */
+    --font-size-lg: 1.125rem; /* 18px */
   }
 }
 
@@ -172,10 +189,8 @@ ol {
   :root {
     --padding-content: 1.25rem; /* 20px */
     --gap-content: 2.5rem; /* 40px */
-    --font-size-title: 2rem; /* 32px */
-    --font-size-2xl: 1.5rem; /* 24px */
-    --font-size-3xl: 1.875rem; /* 30px */
-    --font-size-4xl: 2.25rem; /* 36px */
+    --gap-content-small: 1.5rem; /* 24px */
+    --font-size-base: 0.9rem; /* 16px */
   }
 }
 
@@ -203,4 +218,19 @@ ol {
 
 .button--orange:hover {
   background-color: var(--color-lightblue);
+}
+
+.read-more {
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-darkblue);
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.read-more:hover {
+  background: var(--color-darkblue);
+  color: var(--color-white);
+  padding: 2px 10px;
 }

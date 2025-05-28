@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: var(--spacing-24);
   padding: var(--padding-content);
+  width: 100%;
 }
 
 .articles-promo__grid {
@@ -17,8 +18,8 @@
 }
 
 .articles-promo__card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-default);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
 }
 
 .articles-promo__card-image {
@@ -34,7 +35,7 @@
 
 .articles-promo__card-content {
   display: flex;
-  padding: 30px 26px 49px 26px;
+  padding: var(--gap-content-small);
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -46,18 +47,6 @@
   text-decoration: none;
   color: inherit;
   display: block;
-}
-
-.articles-promo__see-all,
-.articles-promo span {
-  color: var(--color-darkblue);
-  text-decoration: underline 2px;
-  transition: background-color 0.3s ease;
-}
-
-.articles-promo__see-all:hover,
-.articles-promo span:hover {
-  color: var(--color-orange);
 }
 
 /* Responsive Design */

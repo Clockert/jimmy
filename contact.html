@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Jimmy's website. Explore amazing content and stay updated."
+    />
+
+    <meta name="keywords" content="Jimmy, website, blog, portfolio, content" />
+    <meta name="author" content="Jimmy" />
+    <title>Jimmy's contact information</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div id="navbar-container"></div>
+      <header class="contact-hero-container">
+        <img src="assets/logo/full.svg" alt="Jimmy's Logo" class="hero-logo" />
+        <h1 class="contact-hero-title">Jimmy's Mountain Services</h1>
+        <a href="contact.html" class="button button--orange">Get in Touch</a>
+      </header>
+
+      <main>
+        <div class="container">
+          <!-- Contact Form Column -->
+          <div class="column form-column">
+            <div class="card form-card">
+              <h1 class="title">Contact form</h1>
+              <p class="subtitle">
+                Fill out this form to inquire about custom mountain experiences
+                or to book a guided tour.
+              </p>
+              <div class="divider"></div>
+
+              <form class="form-section">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="input-field"
+                    placeholder="Name..."
+                    required
+                  />
+                  <input
+                    type="email"
+                    class="input-field"
+                    placeholder="E-mail..."
+                    required
+                  />
+                  <input
+                    type="tel"
+                    class="input-field"
+                    placeholder="Phone..."
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="input-field"
+                    placeholder="I'm interested in..."
+                    required
+                  />
+                  <input
+                    type="text"
+                    class="input-field"
+                    placeholder="Group size"
+                  />
+                  <input
+                    type="text"
+                    class="input-field"
+                    placeholder="Preferred dates"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <textarea
+                    class="input-field textarea-field"
+                    placeholder="Message..."
+                    rows="6"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="button button--orange submit-button"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Contact Info & Profile Column -->
+          <div class="column">
+            <div class="card contact-card">
+              <h2 class="title">Contact information:</h2>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+                <div class="contact-info">
+                  <div class="contact-label">Phone:</div>
+                  <div class="contact-value">+47 98 98 98 98</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="contact-info">
+                  <div class="contact-label">Email:</div>
+                  <div class="contact-value">jimmy@mountainguide.no</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div class="contact-info">
+                  <div class="contact-label">Address</div>
+                  <div class="contact-value">
+                    Storelva 10, 9105 Kvaløya, Norway
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card profile-card">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                alt="Jimmy Halvardsson"
+                class="profile-image"
+              />
+              <div class="profile-info">
+                <h3 class="profile-name">Jimmy Halvardsson</h3>
+                <p class="profile-description">
+                  I look forward to helping you create unforgettable mountain
+                  experiences in the beautiful Arctic landscapes of Tromsø.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="footer-container"></div>
+    </div>
+    <script src="script/templates.js"></script>
+    <script src="script/menuToggle.js"></script>
+  </body>
+</html>
