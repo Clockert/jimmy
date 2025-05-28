@@ -1,4 +1,4 @@
-.services-hero-container {
+.about-hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,13 +9,13 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.258)
     ),
-    url("/assets/photos/photo-1551524559-8af4e6624178.webp");
+    url("/assets/photos/marek-piwnicki-_NRNNhpJ_sI-unsplash.webp");
   background-size: cover;
   background-position: center;
   gap: var(--spacing-24);
 }
 
-.services-intro-text-section {
+.about-intro-text-section {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -24,63 +24,65 @@
   color: var(--color-darkblue);
   background: url("../../assets/svg/mountains.svg") var(--color-lightblue);
   background-position: center;
-  background-size: cover; /* or cover, depending on your needs */
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-.services-intro-text-section span {
-  font-weight: bold;
-  color: var(--color-darkblue);
-}
-
-.services-info {
+.about-info {
   padding: var(--padding-content);
-  background: var(--color-lightblue);
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: var(--gap-content);
   flex-wrap: wrap;
-  align-content: center;
+  align-content: left;
 }
 
-.services-info__image {
-  flex: 1 1 0;
-  width: 50%;
+.about-info__image {
+  display: flex;
+  width: 35%;
   position: relative;
   object-fit: cover;
 }
-.services-info__image img {
-  height: 100%;
-  width: auto;
-  object-fit: co;
+.about-info__image img {
+  object-fit: cover;
   border-radius: var(--border-radius-default);
 }
 
-.services-info__content {
+.about-info__content {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-24);
+  align-items: flex-end;
+  text-align: right;
 }
 
-.services-info__subtitle {
+.about-info--reversed {
+  padding-bottom: 0;
+}
+
+.about-info--reversed .about-info__content {
+  text-align: left;
+}
+
+.about-info__subtitle {
   color: var(--color-midblue);
 }
 
-.services-info__text {
+.about-info__text {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-24);
   min-width: 300px;
 }
-.services-info__text-intro p {
+.about-info__text-intro p {
   font-weight: bold;
   color: var(--color-darkblue);
 }
-.services-info__text-intro {
+.about-info__text-intro {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-12);
@@ -88,50 +90,34 @@
   padding-bottom: var(--spacing-24);
 }
 
-.services-info__description {
+.about-info__description {
   align-self: stretch;
   word-wrap: break-word;
 }
-.services-possibilities {
+
+.full-width-image-section__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: var(--padding-content);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-24);
-  width: 100%;
-}
-
-.services-possibilities__grid {
-  margin-top: var(--spacing-24);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap-content);
-}
-
-.services-possibilities__card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-24);
-  background-color: var(--color-lightblue);
-  padding: var(--padding-content);
-  box-shadow: var(--shadow-default);
-}
-
-.services-possibilities__list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-12);
+  background-image: linear-gradient(
+      rgba(0, 15, 92, 0.565),
+      rgba(0, 5, 68, 0.662)
+    ),
+    url("../../assets/photos/paul-pastourmatzis-r0J9sGBWFOc-unsplash.webp");
+  background-size: cover;
+  color: var(--color-white);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .services-info {
+  .about-info {
     width: 100%;
+    flex-direction: column-reverse;
   }
-  .services-possibilities__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .services-possibilities__card {
+  .about-info__image {
     width: 100%;
+    aspect-ratio: 1 / 0.75;
   }
 }

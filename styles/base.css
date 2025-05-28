@@ -173,6 +173,7 @@ ol {
     --padding-content: 1.25rem; /* 20px */
     --gap-content: 2.5rem; /* 40px */
     --font-size-title: 2rem; /* 32px */
+    --font-size-2xl: 1.5rem; /* 24px */
     --font-size-3xl: 1.875rem; /* 30px */
     --font-size-4xl: 2.25rem; /* 36px */
   }
@@ -196,7 +197,7 @@ ol {
 /* Button Modifier - Orange */
 .button--orange {
   background-color: var(--color-orange);
-  color: var(--dark-blue);
+  color: var(--color-darkblue);
   font-weight: 700;
 }
 
