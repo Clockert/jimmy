@@ -1,33 +1,49 @@
-<nav class="navbar">
-  <div class="navbar__navigation">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__navigation" id="mobile-navigation">
     <div class="navbar__logo">
-      <a href="index.html" class="navbar__logo-link">
+      <a
+        href="index.html"
+        class="navbar__logo-link"
+        aria-label="Jimmy's Mountain Services - Home"
+      >
         <img
           src="/assets/logo/small.svg"
-          alt="Logo"
+          alt="Jimmy's Mountain Services Logo"
           class="navbar__logo-image"
         />
       </a>
     </div>
-    <ul class="navbar__menu">
-      <li class="navbar__link">
-        <a href="about.html" class="navbar__link">About</a>
+    <ul class="navbar__menu" role="menubar">
+      <li class="navbar__link" role="none">
+        <a href="about.html" class="navbar__link" role="menuitem">About</a>
       </li>
-      <li class="navbar__link">
-        <a href="services.html" class="navbar__link">Services</a>
+      <li class="navbar__link" role="none">
+        <a href="services.html" class="navbar__link" role="menuitem"
+          >Services</a
+        >
       </li>
-      <li class="navbar__link">
-        <a href="articles.html" class="navbar__link">Articles</a>
+      <li class="navbar__link" role="none">
+        <a href="articles.html" class="navbar__link" role="menuitem"
+          >Articles</a
+        >
       </li>
-      <li class="navbar__link">
-        <a href="contact.html" class="navbar__link">Get in Touch</a>
+      <li class="navbar__link" role="none">
+        <a href="contact.html" class="navbar__link" role="menuitem"
+          >Get in Touch</a
+        >
       </li>
     </ul>
   </div>
   <div class="navbar__button">
     <a href="contact.html" class="button button--orange">Get in Touch</a>
   </div>
-  <button class="navbar__menu-toggle" id="mobileMenuToggle">
+  <button
+    class="navbar__menu-toggle"
+    id="mobileMenuToggle"
+    aria-expanded="false"
+    aria-controls="mobile-navigation"
+    aria-label="Toggle navigation menu"
+  >
     <span class="navbar__menu-toggle-text">Menu</span>
   </button>
 </nav>
