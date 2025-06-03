@@ -28,7 +28,6 @@
       <header class="contact-hero-container">
         <img src="assets/logo/full.svg" alt="Jimmy's Logo" class="hero-logo" />
         <h1 class="contact-hero-title">Jimmy's Mountain Services</h1>
-        <a href="contact.html" class="button button--orange">Get in Touch</a>
       </header>
 
       <main>
@@ -42,58 +41,81 @@
                 or to book a guided tour.
               </p>
               <div class="divider"></div>
-
               <form class="form-section">
                 <div class="form-group">
                   <input
                     type="text"
+                    name="name"
                     class="input-field"
                     placeholder="Name..."
+                    aria-label="Full name (required)"
+                    autocomplete="name"
                     required
                   />
                   <input
                     type="email"
+                    name="email"
                     class="input-field"
                     placeholder="E-mail..."
+                    aria-label="Email address (required)"
+                    autocomplete="email"
                     required
                   />
                   <input
                     type="tel"
+                    name="phone"
                     class="input-field"
                     placeholder="Phone..."
+                    aria-label="Phone number (optional)"
+                    autocomplete="tel"
                   />
                 </div>
 
                 <div class="form-group">
                   <input
                     type="text"
+                    name="interested"
                     class="input-field"
                     placeholder="I'm interested in..."
+                    aria-label="Services you're interested in (required)"
                     required
                   />
-                  <input
-                    type="text"
+                  <select
+                    name="group-size"
                     class="input-field"
-                    placeholder="Group size"
-                  />
+                    aria-label="Number of people in your group (optional)"
+                  >
+                    <option value="">Group size...</option>
+                    <option value="1">1 person</option>
+                    <option value="2-3">2-3 people</option>
+                    <option value="4-6">4-6 people</option>
+                    <option value="7-10">7-10 people</option>
+                    <option value="10+">More than 10 people</option>
+                  </select>
                   <input
                     type="text"
+                    name="dates"
                     class="input-field"
                     placeholder="Preferred dates"
+                    aria-label="Your preferred dates for the activity (optional)"
                   />
                 </div>
 
                 <div class="form-group">
                   <textarea
+                    name="message"
                     class="input-field textarea-field"
-                    placeholder="Message..."
+                    placeholder="Tell us about your mountain adventure goals, experience level, and any specific requirements..."
+                    aria-label="Detailed message about your mountain adventure goals and experience level (required)"
                     rows="6"
+                    required
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   class="button button--orange submit-button"
+                  aria-label="Submit contact form"
                 >
                   Submit
                 </button>
@@ -115,7 +137,7 @@
                   </svg>
                 </div>
                 <div class="contact-info">
-                  <div class="contact-label">Phone:</div>
+                  <div class="contact-label"><b>Phone:</b></div>
                   <div class="contact-value">+47 98 98 98 98</div>
                 </div>
               </div>
@@ -130,7 +152,7 @@
                   </svg>
                 </div>
                 <div class="contact-info">
-                  <div class="contact-label">Email:</div>
+                  <div class="contact-label"><b>Email:</b></div>
                   <div class="contact-value">jimmy@mountainguide.no</div>
                 </div>
               </div>
@@ -143,7 +165,7 @@
                   </svg>
                 </div>
                 <div class="contact-info">
-                  <div class="contact-label">Address</div>
+                  <div class="contact-label"><b>Address:</b></div>
                   <div class="contact-value">
                     Storelva 10, 9105 Kvaløya, Norway
                   </div>
@@ -173,5 +195,6 @@
     </div>
     <script src="script/templates.js"></script>
     <script src="script/menuToggle.js"></script>
+    <script src="script/formValidation.js"></script>
   </body>
 </html>

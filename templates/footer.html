@@ -70,22 +70,38 @@
           <div class="footer__form-group">
             <input
               type="text"
+              name="name"
               class="footer__input"
               placeholder="Name..."
+              aria-label="Full name (required)"
+              autocomplete="name"
               required
             />
             <input
               type="email"
+              name="email"
               class="footer__input"
               placeholder="E-mail..."
+              aria-label="Email address (required)"
+              autocomplete="email"
               required
             />
-            <input type="tel" class="footer__input" placeholder="Phone..." />
+            <input
+              type="tel"
+              name="phone"
+              class="footer__input"
+              placeholder="Phone..."
+              aria-label="Phone number (optional)"
+              autocomplete="tel"
+            />
           </div>
           <div class="footer__form-group">
             <textarea
+              name="message"
               class="footer__input footer__textarea"
               placeholder="Message..."
+              aria-label="Your message (required)"
+              autocomplete="off"
               required
             ></textarea>
           </div>
