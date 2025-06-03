@@ -1,20 +1,20 @@
-// Enhanced form validation with real-time feedback and better UX
+/**
+ * Form validation with real-time feedback
+ */
+
 document.addEventListener("templates-loaded", () => {
   const forms = document.querySelectorAll("form");
 
   forms.forEach((form) => {
-    // Add real-time validation on blur/input
     const inputs = form.querySelectorAll("input, textarea");
     inputs.forEach((input) => {
       input.addEventListener("blur", () => validateField(input));
       input.addEventListener("input", () => clearFieldError(input));
     });
 
-    // Handle form submission
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Get all form fields by their placeholders and aria-labels
       const nameField =
         this.querySelector('input[placeholder*="Name"]') ||
         this.querySelector('input[aria-label*="name"]');
@@ -30,43 +30,29 @@ document.addEventListener("templates-loaded", () => {
       const groupSizeField = this.querySelector(
         'input[placeholder*="Group size"]'
       );
-      const datesField = this.querySelector('input[placeholder*="dates"]');
       const messageField = this.querySelector("textarea");
 
       let isValid = true;
 
-      // Clear all previous errors
       clearAllErrors(this);
 
-      // Validate all fields
-      if (nameField) {
-        if (!validateName(nameField)) isValid = false;
-      }
-
-      if (emailField) {
-        if (!validateEmail(emailField)) isValid = false;
-      }
-
-      if (phoneField && phoneField.value.trim()) {
-        if (!validatePhone(phoneField)) isValid = false;
-      }
-
-      if (interestedField) {
-        if (!validateInterested(interestedField)) isValid = false;
-      }
-
-      if (groupSizeField && groupSizeField.value.trim()) {
-        if (!validateGroupSize(groupSizeField)) isValid = false;
-      }
-
-      if (messageField) {
-        if (!validateMessage(messageField)) isValid = false;
-      }
+      if (nameField && !validateName(nameField)) isValid = false;
+      if (emailField && !validateEmail(emailField)) isValid = false;
+      if (phoneField && phoneField.value.trim() && !validatePhone(phoneField))
+        isValid = false;
+      if (interestedField && !validateInterested(interestedField))
+        isValid = false;
+      if (
+        groupSizeField &&
+        groupSizeField.value.trim() &&
+        !validateGroupSize(groupSizeField)
+      )
+        isValid = false;
+      if (messageField && !validateMessage(messageField)) isValid = false;
 
       if (isValid) {
         showSuccess(this);
       } else {
-        // Focus on first error field
         const firstError = this.querySelector(".field-error");
         if (firstError) {
           firstError.focus();
@@ -77,7 +63,6 @@ document.addEventListener("templates-loaded", () => {
   });
 });
 
-// Individual field validation functions
 function validateField(field) {
   const placeholder = field.placeholder.toLowerCase();
   const ariaLabel = (field.getAttribute("aria-label") || "").toLowerCase();
@@ -144,10 +129,8 @@ function validateEmail(field) {
 
 function validatePhone(field) {
   const value = field.value.trim();
+  if (!value) return true;
 
-  if (!value) return true; // Phone is optional
-
-  // Remove all non-digit characters for validation
   const cleanPhone = value.replace(/\D/g, "");
 
   if (cleanPhone.length < 8) {
@@ -181,8 +164,7 @@ function validateInterested(field) {
 
 function validateGroupSize(field) {
   const value = field.value.trim();
-
-  if (!value) return true; // Group size is optional
+  if (!value) return true;
 
   const number = parseInt(value);
   if (isNaN(number) || number < 1 || number > 50) {
@@ -218,17 +200,14 @@ function validateMessage(field) {
 }
 
 function showFieldError(field, message) {
-  // Clear any existing errors for this field FIRST
   clearFieldError(field);
 
-  // Style the field
   field.classList.add("field-error");
-  field.style.borderColor = "#ff4444";
-  field.style.backgroundColor = "#fff5f5";
+  field.setAttribute("aria-invalid", "true");
 
-  // Create error message element
   const errorDiv = document.createElement("div");
   errorDiv.className = "error-message";
+  errorDiv.setAttribute("role", "alert");
   errorDiv.textContent = message;
   errorDiv.style.cssText = `
     color: #ff4444;
@@ -237,17 +216,15 @@ function showFieldError(field, message) {
     display: block;
   `;
 
-  // Insert error after the field
   field.parentNode.insertBefore(errorDiv, field.nextSibling);
 }
 
 function clearFieldError(field) {
-  // Remove error styling
   field.classList.remove("field-error");
+  field.removeAttribute("aria-invalid");
   field.style.borderColor = "";
   field.style.backgroundColor = "";
 
-  // Remove ALL error messages related to this field
   let nextElement = field.nextElementSibling;
   while (nextElement && nextElement.classList.contains("error-message")) {
     const toRemove = nextElement;
@@ -257,26 +234,22 @@ function clearFieldError(field) {
 }
 
 function clearAllErrors(form) {
-  // Remove all error styling and messages
   const errorFields = form.querySelectorAll(".field-error");
   errorFields.forEach((field) => {
     field.classList.remove("field-error");
+    field.removeAttribute("aria-invalid");
     field.style.borderColor = "";
     field.style.backgroundColor = "";
   });
 
-  // Remove all error messages in the form
-  const errorMessages = form.querySelectorAll(".error-message");
-  errorMessages.forEach((msg) => msg.remove());
-
-  // Remove any success messages
-  const successMessages = form.querySelectorAll(".success-message");
-  successMessages.forEach((msg) => msg.remove());
+  form.querySelectorAll(".error-message").forEach((msg) => msg.remove());
+  form.querySelectorAll(".success-message").forEach((msg) => msg.remove());
 }
 
 function showSuccess(form) {
   const successDiv = document.createElement("div");
   successDiv.className = "success-message";
+  successDiv.setAttribute("role", "status");
   successDiv.innerHTML = `
     <strong>Thank you!</strong> Your message has been sent successfully. 
     We'll get back to you within 24 hours to discuss your mountain adventure.
@@ -291,16 +264,10 @@ function showSuccess(form) {
     font-size: 16px;
   `;
 
-  // Insert at the top of the form
   form.insertBefore(successDiv, form.firstChild);
-
-  // Reset form
   form.reset();
-
-  // Scroll to success message
   successDiv.scrollIntoView({ behavior: "smooth", block: "center" });
 
-  // Remove success message after 8 seconds
   setTimeout(() => {
     if (successDiv.parentNode) {
       successDiv.remove();
