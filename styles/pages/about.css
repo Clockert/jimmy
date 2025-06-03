@@ -112,12 +112,28 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .about-info {
-    width: 100%;
+  .about-info__right {
     flex-direction: column-reverse;
   }
+
+  .about-info__content .about-info__text {
+    text-align: center;
+  }
+
+  .about-info__content a {
+    align-self: center;
+  }
+
   .about-info__image {
     width: 100%;
     aspect-ratio: 1 / 0.75;
+  }
+
+  .about-hero-container {
+    height: 60vh;
+  }
+
+  .about-hero-container img {
+    height: 50px;
   }
 }
