@@ -43,7 +43,7 @@
   .services__grid {
     display: flex;
     overflow-x: auto;
-    gap: 20px;
+    gap: var(--gap-content-small);
     padding-bottom: 10px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
