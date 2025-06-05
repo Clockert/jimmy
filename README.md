@@ -177,7 +177,7 @@ The project uses a modular template system that loads components dynamically. En
 
 - Blog layout with featured article
 - Article grid with preview cards
-- Content management ready structure
+- Content management planed structure
 
 ## ♿ Accessibility Features
 
@@ -231,4 +231,4 @@ Based in Tromsø, Northern Norway, Jimmy's Mountain Services offers personalized
 
 ---
 
-_Built with ❤️ for the mountains of Tromsø_
+_Built with ❤️ for the mountains of Tromsø by Charlotte Lockert_
